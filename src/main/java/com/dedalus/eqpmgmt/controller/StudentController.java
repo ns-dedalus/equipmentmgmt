@@ -24,9 +24,9 @@ public class StudentController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "/api/students")
-	public ResponseEntity<Student> saveStudent(@RequestBody Student student) {
-		System.out.println("saveStudent");
-		return new ResponseEntity<Student>(this.studentService.saveStudent(student), HttpStatus.CREATED);
+	public ResponseEntity<Student> createStudent(@RequestBody Student student) {
+		System.out.println("createStudent");
+		return new ResponseEntity<Student>(this.studentService.createStudent(student), HttpStatus.CREATED);
 	}
 	
 }

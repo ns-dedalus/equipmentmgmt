@@ -18,6 +18,12 @@ public class Student {
 	@Column(name = "studentId" )
 	private int studentId;
 	
+	@Column(name = "studentName", nullable = false, length = 50 )
+	private String studentName;
+	
+	@Column(name = "marks", nullable = false )
+	private int marks;
+	
 	public int getStudentId() {
 		return studentId;
 	}
@@ -42,9 +48,5 @@ public class Student {
 		this.marks = marks;
 	}
 
-	@Column(name = "studentName", nullable = false, length = 50 )
-	private String studentName;
 	
-	@Column(name = "marks", nullable = false )
-	private int marks;
 }
