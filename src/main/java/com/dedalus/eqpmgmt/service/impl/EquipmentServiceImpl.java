@@ -26,5 +26,18 @@ public class EquipmentServiceImpl implements EquipmentService {
 	public List<Equipment> findAllEquipments() {
 		return this.equipmentRepository.findAll();
 	}
+	@Override
+	public List<Equipment> findAllEquipments(String equipmentIdStartsWith, String sortBy, Boolean descOrder, int pageNo,
+			int pageSize) {
+		return this.equipmentRepository.findAll();
+	}
+	@Override
+	public Equipment updateEquipment(Equipment equipmentTobeUpdated) {
+		return this.equipmentRepository.save(equipmentTobeUpdated);
+	}
+	@Override
+	public Equipment findByEquipmentId(int equipmentId) {
+		return this.equipmentRepository.findById(equipmentId).orElseThrow();
+	}
 
 }

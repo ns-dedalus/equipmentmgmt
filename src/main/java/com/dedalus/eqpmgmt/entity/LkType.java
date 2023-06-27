@@ -14,7 +14,8 @@ public class LkType {
     @Id
     @Column(name = "TypeId" )
     private Integer typeId;
-
+    @Column(name = "TypeGroupId" )
+    private Integer typeGroupId;
     @Column(name = "TypeName" )
     private String typeName;
     @Column(name = "TypeDisplayName" )

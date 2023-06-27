@@ -11,15 +11,24 @@ import jakarta.persistence.Table;
 @Table(name = "LkStatus")
 public class LkStatus {
 	@Id
-	@Column(name = "TypeId" )
+	@Column(name = "StatusId" )
     private Integer statusId;
-
+	@Column(name = "StatusTypeId" )
+    private Integer statusTypeId;
     @Column(name = "StatusName" )
     private String statusName;
     @Column(name = "StatusDisplayName" )
     private String statusDisplayName;
 
-    public Integer getStatusId() {
+    public Integer getStatusTypeId() {
+		return statusTypeId;
+	}
+
+	public void setStatusTypeId(Integer statusTypeId) {
+		this.statusTypeId = statusTypeId;
+	}
+
+	public Integer getStatusId() {
 		return statusId;
 	}
 

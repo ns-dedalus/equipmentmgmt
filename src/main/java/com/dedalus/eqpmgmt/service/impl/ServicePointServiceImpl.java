@@ -1,5 +1,7 @@
 package com.dedalus.eqpmgmt.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,6 +21,10 @@ public class ServicePointServiceImpl implements ServicePointService {
 	@Override
 	public ServicePoint createServicePoint(ServicePoint ServicePoint) {
 		return this.servicePointRepository.save(ServicePoint);
+	}
+	@Override
+	public List<ServicePoint> findAllServicePoints() {
+		return this.servicePointRepository.findAll();
 	}
 
 }
